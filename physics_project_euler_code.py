@@ -1,15 +1,3 @@
-"""
-The Role of Physics in Sports
-Euler-method numerical model and graph generator
-
-This script reproduces the numerical values and Figures 1 to 11 used in
-Sections 6 and 7 of the project.
-
-Requirements:
-    numpy
-    matplotlib
-"""
-
 import math
 from pathlib import Path
 
@@ -56,7 +44,7 @@ def euler_2d(
     include_magnus: bool = True,
     max_time: float = 30.0,
 ):
-    """Calculate a two-dimensional trajectory using the explicit Euler method."""
+    #Calculate a two-dimensional trajectory using the explicit Euler method.
     theta = math.radians(angle_deg)
 
     x = 0.0
@@ -120,7 +108,7 @@ def euler_3d_free_kick(
     omega_z: float = 0.0,
     max_time: float = 10.0,
 ):
-    """Calculate a three-dimensional football trajectory with sidespin."""
+    #Calculate a three-dimensional football trajectory with sidespin.
     theta = math.radians(angle_deg)
 
     x = y = z = 0.0
@@ -456,7 +444,7 @@ def main():
     plt.legend()
     save_figure("figure_11.png")
 
-    # Print the principal numerical results.
+    # Print the principal numerical results
     print(f"Best cricket-ball angle with drag: {best_angle:.1f}°")
     print(f"Cricket range at 45° in vacuum: {x_vac[-1]:.2f} m")
     print(f"Cricket range at 45° with drag: {x_air[-1]:.2f} m")
